@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import dollarImg from '../images/icon-dollar.svg';
 import personImg from '../images/icon-person.svg';
+import { BsCurrencyPound } from 'react-icons/bs';
 import { FormProps } from '../interfaces/FormProps';
 
 const Form: FC<FormProps> = ({
@@ -21,11 +21,7 @@ const Form: FC<FormProps> = ({
           Bill
         </label>
         <div className='relative '>
-          <img
-            src={dollarImg}
-            alt='dollar'
-            className='absolute top-1/2 -translate-y-1/2 left-5'
-          />
+          <BsCurrencyPound className='absolute top-1/2 -translate-y-1/2 left-5 text-gray-500 ' />
           <input
             type='text'
             id='bill'
