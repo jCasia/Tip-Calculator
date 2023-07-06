@@ -11,6 +11,9 @@ export default {
         lightGrayCyan: 'hsl(185, 41%, 84%)',
         vLightGrayCyan: 'hsl(189, 41%, 97%)',
         white: 'hsl(0, 0%, 100%)',
+
+        redColor: 'hsl(346, 100%, 43%)',
+        hoverColor: '#8cded2',
       },
       fontFamily: {
         spaceMono: ['Space Mono', 'sans-serif'],
