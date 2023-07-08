@@ -15,7 +15,7 @@ const Form: FC<FormProps> = ({
   peopleNum,
 }) => {
   return (
-    <form className='flex flex-col gap-7'>
+    <form className='flex flex-col gap-7 laptopsm:justify-around laptopsm:gap-0 laptopsm:px-2'>
       <div className='flex flex-col gap-2'>
         <label htmlFor='bill' className='text-darkGrayCyan'>
           Bill
@@ -25,10 +25,11 @@ const Form: FC<FormProps> = ({
           <input
             type='text'
             id='bill'
-            className={`bg-vLightGrayCyan w-full py-3 text-right pl-12 pr-3 text-veryDarkCyan text-2xl focus:outline-none focus:ring
+            className={`bg-vLightGrayCyan w-full py-3 text-right pl-12 pr-3 text-veryDarkCyan rounded-md text-2xl focus:outline-none focus:ring
            ${isBillValid ? 'focus:ring-strongCyan' : 'focus:ring-redColor'} `}
             inputMode='numeric'
             pattern='^[1-9][\.\d]*(,\d+)?$'
+            placeholder='0'
             value={bill}
             onChange={billAmountHandler}
           />
@@ -36,7 +37,7 @@ const Form: FC<FormProps> = ({
       </div>
       <div className='flex flex-col gap-4'>
         <h3 className='text-darkGrayCyan'>Select Tip %</h3>
-        <div className='grid grid-cols-2 grid-rows-3 gap-4 text-2xl '>
+        <div className='grid grid-cols-2 grid-rows-3 gap-4 text-2xl laptopsm:grid-cols-3 laptopsm:grid-rows-2 '>
           <div className='relative rounded-md py-2 '>
             <input
               type='radio'
@@ -130,7 +131,7 @@ const Form: FC<FormProps> = ({
 
           <input
             type='text'
-            className={`bg-vLightGrayCyan w-full text-right pr-3 rounded-md focus:outline-none focus:ring ${
+            className={`bg-vLightGrayCyan w-full text-right pr-3 rounded-md placeholder:text-darkGrayCyan focus:outline-none focus:ring ${
               isTipValid ? 'focus:ring-strongCyan ' : 'focus:ring-redColor '
             }`}
             placeholder='Custom'
@@ -155,12 +156,13 @@ const Form: FC<FormProps> = ({
           <input
             type='text'
             id='people'
-            className={`bg-vLightGrayCyan w-full py-3 text-right pl-12 pr-3 text-veryDarkCyan text-2xl focus:outline-none focus:ring
+            className={`bg-vLightGrayCyan w-full py-3 text-right pl-12 pr-3 rounded-md text-veryDarkCyan text-2xl focus:outline-none focus:ring
            ${
              isPeopleNumValid ? 'focus:ring-strongCyan' : 'focus:ring-redColor'
            }`}
             inputMode='numeric'
             pattern='^[1-9]\d*$'
+            placeholder='0'
             value={peopleNum}
             onChange={peopleNumHandler}
           />

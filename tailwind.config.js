@@ -14,12 +14,18 @@ export default {
 
         redColor: 'hsl(346, 100%, 43%)',
         hoverColor: '#8cded2',
+        disabledColor: '#0D686D',
+        disabledText: '#055D61',
       },
       fontFamily: {
         spaceMono: ['Space Mono', 'sans-serif'],
       },
     },
-    screens: {},
+    screens: {
+      tabletsm: '550px',
+      tabletmd: '700px',
+      laptopsm: '900px',
+    },
   },
   plugins: [],
 };

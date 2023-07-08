@@ -40,12 +40,15 @@ const App: FC = () => {
   };
 
   return (
-    <main className=' w-full min-h-screen font-spaceMono bg-lightGrayCyan'>
-      <div>
+    <main className=' w-full min-h-screen font-spaceMono bg-lightGrayCyan tabletmd:grid tabletmd:place-items-center'>
+      <div className='tabletsm:flex tabletsm:flex-col tabletsm:gap-7'>
         <div>
           <img src={logo} alt='logo' className='mx-auto py-10' />
         </div>
-        <div className='flex flex-col gap-8 p-8 bg-white rounded-t-3xl'>
+        <div
+          className='flex flex-col gap-8 p-8 bg-white rounded-t-3xl tabletsm:mx-10 tabletmd:grid tabletmd:grid-cols-2 tabletmd:grid-rows-1 tabletmd:max-w-[920px] tabletmd:mx-4 
+        tabletmd:rounded-3xl shadow-lg'
+        >
           <Form
             billAmountHandler={billAmountHandler}
             tipAmountHandler={tipAmountHandler}
