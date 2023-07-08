@@ -27,7 +27,6 @@ const Form: FC<FormProps> = ({
             id='bill'
             className={`bg-vLightGrayCyan w-full py-3 text-right pl-12 pr-3 text-veryDarkCyan rounded-md text-2xl focus:outline-none focus:ring
            ${isBillValid ? 'focus:ring-strongCyan' : 'focus:ring-redColor'} `}
-            inputMode='numeric'
             pattern='^[1-9][\.\d]*(,\d+)?$'
             placeholder='0'
             value={bill}
